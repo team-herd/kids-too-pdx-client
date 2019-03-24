@@ -6,13 +6,12 @@ import Header from '../header/Header';
 //   Switch
 // } from 'react-router-dom';
 // import { getRoutes } from '../../routes';
-// import Header from '../header/Header';
 
 export default function App() {
   return (
-      <>
-        <Header />
-      </>
+    <>
+    <Header />
+    </>
   );
 }
 
