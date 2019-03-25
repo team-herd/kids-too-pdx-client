@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Home from '../home/Home';
 import EventDetail from '../events/EventsDetail';
 import SubmitEvent from '../submission/SubmitEvent';
+import AboutUs from '../AboutUs';
 import styles from './Header.css';
+
 
 function Header() {
   return (
@@ -24,6 +26,7 @@ function Header() {
             <Route exact path='/' component={Home} />
             <Route exact path='/submit-event' component={SubmitEvent} />
             <Route exact path='/events/:id' component={EventDetail} />
+            <Route exact path='/aboutus' component={AboutUs} />
             {/* <Route exact path='/contact' component={Contact} />  */}
           </Switch>
         </section>
