@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Home from '../home/Home';
+import EventDetail from '../events/EventsDetail';
 import SubmitEvent from '../submission/SubmitEvent';
 import styles from './Header.css';
 
@@ -22,6 +23,7 @@ function Header() {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/submit-event' component={SubmitEvent} />
+            <Route exact path='/events/:id' component={EventDetail} />
             {/* <Route exact path='/contact' component={Contact} />  */}
           </Switch>
         </section>

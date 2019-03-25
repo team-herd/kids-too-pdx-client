@@ -30,12 +30,13 @@ function Events({ events }) {
         </select>
         <select>
           <option value="DEFAULT" hidden>Age</option>
+          <option value="hs">All Ages</option>
           <option value="baby">Babies</option>
           <option value="ps">Pre-K</option>
           <option value="k3">K-3</option>
-          <option value="4-6">GRADES 4-6</option>
-          <option value="ms">MS</option>
-          <option value="hs">HS</option>
+          <option value="4-6">Grade 4-6</option>
+          <option value="ms">Grade 6-8</option>
+          <option value="hs">Grade 9-12</option>
         </select>
       </section>
       <section className={styles.Event}>
