@@ -7,7 +7,7 @@ function EventsDetail({ event }) {
   return (
     <section>
       <h2>{name}</h2>
-      <img src={picture} alt='event picture' />
+      <img src={picture} alt='event picture'/>
       <p>{date} @ {time}</p>
       <p><span>Location:</span>{location.address}</p>
       <p><span>Cost:</span>{cost}</p>
