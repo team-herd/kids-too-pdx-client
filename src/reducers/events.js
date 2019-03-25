@@ -1,7 +1,9 @@
 import { FETCH_EVENTS } from '../actions/events';
 
 const initialState = {
-  events: []
+  events: [{
+    event: {}
+  }]
 };
 
 export default function reducer(state = initialState, action) {

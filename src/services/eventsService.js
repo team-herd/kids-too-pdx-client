@@ -1,5 +1,5 @@
 export const getEvents = () => {
-  return Promise.resolve([
+  const events = [
     {
       name: 'Potluck in the Park',
       date: '04/21/19',
@@ -313,5 +313,8 @@ export const getEvents = () => {
       organization: 'Oregon Humane Society'
     }
 
-  ]);
+  ];
+  return Promise.resolve({
+    events
+  });
 };
