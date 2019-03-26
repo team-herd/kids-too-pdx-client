@@ -1,9 +1,8 @@
-import { FETCH_EVENTS } from '../actions/events';
+import { FETCH_EVENTS, FETCH_EVENTS_PENDING, FETCH_EVENTS_FULFILLED } from '../actions/events';
 
 const initialState = {
-  events: [{
-    event: {}
-  }]
+  events: [],
+  loading: false
 };
 
 export default function reducer(state = initialState, action) {
@@ -12,6 +11,16 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         events: action.payload
+      };
+    case FETCH_EVENTS_PENDING:
+      return {
+        ...state,
+        loading: true
+      };
+    case FETCH_EVENTS_FULFILLED:
+      return {
+        ...state,
+        loading: false
       };
     default:
       return state;
