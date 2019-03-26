@@ -4,6 +4,7 @@ import Home from '../home/Home';
 import EventDetail from '../events/EventsDetail';
 import SubmitEvent from '../submission/SubmitEvent';
 import AboutUs from '../info/AboutUs';
+import { withSession } from '../../containers/withSession';
 import styles from './Header.css';
 
 function Header() {
@@ -23,7 +24,7 @@ function Header() {
           </header>
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path='/submit-event' component={SubmitEvent} />
+            <Route exact path='/submit-event' component={withSession(SubmitEvent)} />
             <Route exact path='/events/:id' component={EventDetail} />
             <Route exact path='/aboutus' component={AboutUs} /> 
           </Switch>
