@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { login } from '../services/auth';
-import { getToken } from '../selectors/session';
+import { login } from '../../services/auth';
+import { getToken } from '../../selectors/session';
 
 export const withSession = Component => {
   class WithSession extends React.PureComponent {
@@ -15,7 +15,7 @@ export const withSession = Component => {
       }
     }
     render() {
-      if(!this.props.token) return <h1>Loading...</h1>;
+      if(!this.props.token) return <h1>NOT LOGGED IN</h1>;
       return <Component {...this.props} />;
     }
   }

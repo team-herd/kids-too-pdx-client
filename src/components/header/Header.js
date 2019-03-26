@@ -4,7 +4,8 @@ import Home from '../home/Home';
 import EventDetail from '../events/EventsDetail';
 import SubmitEvent from '../submission/SubmitEvent';
 import AboutUs from '../info/AboutUs';
-import { withSession } from '../../containers/withSession';
+import Callback from '../../containers/auth/Callback';
+import { withSession } from '../../containers/auth/withSession';
 import styles from './Header.css';
 
 function Header() {
@@ -27,6 +28,8 @@ function Header() {
             <Route exact path='/submit-event' component={withSession(SubmitEvent)} />
             <Route exact path='/events/:id' component={EventDetail} />
             <Route exact path='/aboutus' component={AboutUs} /> 
+            <Route exact path='/callback' component={Callback} /> 
+
           </Switch>
         </section>
       </Router>
