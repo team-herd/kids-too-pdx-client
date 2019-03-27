@@ -4,7 +4,7 @@ import styles from './SubmitEvent.css';
 
 function SubmitEvent({
   contact, name, date, time, location, price, minAge, maxAge, category, description,
-  contactNameChange, emailChange, phoneChange, nameChange, dateChange, timeChange, priceChange,
+  contactChange, nameChange, dateChange, timeChange, locationChange, priceChange,
   rrSelect, minAgeChange, maxAgeChange, onSelectCategory, descriptionChange
 }) {
   return (
@@ -14,15 +14,15 @@ function SubmitEvent({
           <legend>Contact Info</legend>
 
           <label name="name">Name:
-            <input type="text" value={contact.name} onChange={contactNameChange} required />
+            <input type="text" value={contact.name} name="contact" onChange={contactChange} required />
           </label>
 
           <label name="email">Email:
-            <input type="email" value={contact.email} onChange={emailChange} required />
+            <input type="email" value={contact.email} name ="email" onChange={contactChange} required />
           </label>
 
           <label>Phone #:
-            <input type="tel" value={contact.phone} onChange={phoneChange} required />
+            <input type="tel" value={contact.phone} name="phone" onChange={contactChange} required />
           </label>
         </fieldset>
         <fieldset>
@@ -41,11 +41,11 @@ function SubmitEvent({
           </label>
 
           <label>Location:
-            <input type="text" placeholder="Venue" value={location.venue} required />
-            <input type="text" placeholder="Address" value={location.address} required />
-            <input type="text" placeholder="City" value={location.city} />
-            <input type="state" placeholder="State" value={location.state} />
-            <input type="zipcode" placeholder="Zipcode" value={location.zipcode} />
+            <input type="text" placeholder="Venue" value={location.venue} name="venue" onChange={locationChange} required />
+            <input type="text" placeholder="Address" value={location.address} name="address" onChange={locationChange} required />
+            <input type="text" placeholder="City" value={location.city} name="city" onChange={locationChange}/>
+            <input type="state" placeholder="State" value={location.state} name="state" onChange={locationChange}/>
+            <input type="zipcode" placeholder="Zipcode" value={location.zipcode} name="zipcode" onChange={locationChange}/>
           </label>
 
           <label>Price:
@@ -53,7 +53,7 @@ function SubmitEvent({
           </label>
 
           <label>Reduced Rate Available:
-            <button type="radio" onSelect={rrSelect}></button>
+            <button type="radio" onSelect={rrSelect} value={rr} checked={this.state.rr}></button>
           </label>
 
           <label>Age Range:
@@ -95,12 +95,11 @@ SubmitEvent.propTypes = {
   maxAge: PropTypes.number,
   category: PropTypes.string,
   description: PropTypes.string,
-  contactNameChange: PropTypes.func.isRequired,
-  emailChange: PropTypes.func.isRequired,
-  phoneChange: PropTypes.func.isRequired,
+  contactChange: PropTypes.func.isRequired,
   nameChange: PropTypes.func.isRequired,
   dateChange: PropTypes.func.isRequired,
   timeChange: PropTypes.func.isRequired,
+  locationChange: PropTypes.func.isRequired,
   priceChange: PropTypes.func.isRequired,
   rrSelect: PropTypes.func.isRequired,
   minAgeChange: PropTypes.func.isRequired,

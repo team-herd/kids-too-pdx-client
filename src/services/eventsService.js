@@ -1,3 +1,5 @@
+export const postEvent = event => post('/events', event);
+
 export const getEvents = () => {
   const events = [
     {
