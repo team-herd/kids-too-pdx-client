@@ -1,7 +1,6 @@
 .Event {
   display: flex;
   justify-content: center;
-
   ul {
     width: 95vw;
     list-style: none;
