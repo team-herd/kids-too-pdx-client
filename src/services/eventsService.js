@@ -1,4 +1,4 @@
-export const postEvent = event => post('/events', event);
+// export const postEvent = event => post('/events', event);
 
 export const getEvents = () => {
   const events = [
@@ -28,6 +28,7 @@ export const getEvents = () => {
     },
     {
       name: 'Potluck in the Park',
+      image: './public/assets/volunteerpic.jpg',
       date: '03/31/19',
       location: { address: 'SW Hawthorne', city: 'Portland', zip: 97201 },
       time: '12pm',
@@ -40,6 +41,7 @@ export const getEvents = () => {
     },
     {
       name: 'Smart to Read with Kids',
+      image: './public/assets/volunteer2pic.jpg',
       date: '04/20/19',
       location: { address: 'Portland' },
       time: '12pm',
@@ -52,6 +54,7 @@ export const getEvents = () => {
     },
     {
       name: 'Smart to Read with Kids',
+      image: './public/assets/volunteerpic.jpg',
       date: '04/27/19',
       location: { address: 'Portland' },
       time: '12pm',
@@ -64,6 +67,7 @@ export const getEvents = () => {
     },
     {
       name: 'Smart to Read with Kids',
+      image: './public/assets/volunteer2pic.jpg',
       date: '05/04/19',
       location: { address: 'Portland' },
       time: '12pm',
@@ -76,6 +80,7 @@ export const getEvents = () => {
     },
     {
       name: 'Marquam Nature Park Restoration Work Party',
+      image: './public/assets/volunteerpic.jpg',
       date: '03/30/19',
       location: { address: 'Portland' },
       time: '9am',
@@ -88,6 +93,20 @@ export const getEvents = () => {
     },
     {
       name: 'Get Books to Children at Children\'s Book Bank',
+      image: './public/assets/volunteer2pic.jpg',
+      date: '04/21/19',
+      location: { address: 'SW Hawthorne', city: 'Portland', zip: 97201 },
+      time: '12pm',
+      price: 0,
+      age: '12',
+      description: 'Serving the hungry, rain or shine',
+      pending: '',
+      category: 'volunteer',
+      organization: 'Potluck in the Park'
+    },
+    {
+      name: 'Get Books to Children at Children\'s Book Bank',
+      image: './public/assets/volunteerpic.jpg',
       date: '04/09/19',
       location: { address: 'Portland' },
       time: '9am',
@@ -100,6 +119,7 @@ export const getEvents = () => {
     },
     {
       name: 'Get Books to Children at Children\'s Book Bank',
+      image: './public/assets/volunteerpic.jpg',
       date: '04/09/19',
       location: { address: 'Portland' },
       time: '9am',
@@ -112,6 +132,20 @@ export const getEvents = () => {
     },
     {
       name: 'Kids! Sort & Package Supplies for Families @ Portland Center',
+      image: './public/assets/volunteerpic.jpg',
+      date: '04/07/19',
+      location: { address: 'SW Hawthorne', city: 'Portland', zip: 97201 },
+      time: '12pm',
+      price: 0,
+      age: '12',
+      description: 'Serving the hungry, rain or shine',
+      pending: '',
+      category: 'volunteer',
+      organization: 'Potluck in the Park'
+    },
+    {
+      name: 'Kids! Sort & Package Supplies for Families @ Portland Center',
+      image: './public/assets/volunteer2pic.jpg',
       date: '04/03/19',
       location: { address: 'Portland' },
       time: '7pm',
@@ -124,6 +158,7 @@ export const getEvents = () => {
     },
     {
       name: 'Make Meals from the Heart at Ronald McDonald House',
+      image: './public/assets/volunteerpic.jpg',
       date: '04/10/19',
       location: { address: 'Portland' },
       time: '5pm',
@@ -136,6 +171,7 @@ export const getEvents = () => {
     },
     {
       name: 'Make Meals from the Heart at Ronald McDonald House',
+      image: './public/assets/volunteerpic.jpg',
       date: '04/17/19',
       location: { address: 'Portland' },
       time: '5pm',
@@ -148,6 +184,7 @@ export const getEvents = () => {
     },
     {
       name: 'Make Meals from the Heart at Ronald McDonald House',
+      image: './public/assets/volunteerpic.jpg',
       date: '04/24/19',
       location: { address: 'Portland' },
       time: '5pm',
@@ -160,6 +197,7 @@ export const getEvents = () => {
     },
     {
       name: 'Support the Arts: Columbia Symphony Orchestra',
+      image: './public/assets/volunteer2pic.jpg',
       date: '05/03/19',
       location: { address: 'Portland' },
       time: '6pm',
@@ -172,6 +210,7 @@ export const getEvents = () => {
     },
     {
       name: 'Support the Arts: Columbia Symphony Orchestra',
+      image: './public/assets/volunteer2pic.jpg',
       date: '05/10/19',
       location: { address: 'Portland' },
       time: '6pm',
@@ -184,6 +223,7 @@ export const getEvents = () => {
     },
     {
       name: 'Restore Terwiliger Blvd Forest',
+      image: './public/assets/volunteerpic.jpg',
       date: '04/20/19',
       location: { address: 'Portland' },
       time: '9am',
@@ -196,6 +236,7 @@ export const getEvents = () => {
     },
     {
       name: 'Fill Baby Bags for Parents',
+      image: './public/assets/volunteerpic.jpg',
       date: '04/20/19',
       location: { address: 'Portland' },
       time: '9am',
@@ -208,6 +249,7 @@ export const getEvents = () => {
     },
     {
       name: 'Fill Baby Bags for Parents',
+      image: './public/assets/volunteerpic.jpg',
       date: '05/05/19',
       location: { address: 'Portland' },
       time: '9am',
@@ -220,6 +262,7 @@ export const getEvents = () => {
     },
     {
       name: 'Fill Baby Bags for Parents',
+      image: './public/assets/volunteerpic.jpg',
       date: '05/12/19',
       location: { address: 'Portland' },
       time: '9am',
@@ -232,6 +275,7 @@ export const getEvents = () => {
     },
     {
       name: 'Grocery Shop for Homebound Seniors-Beaverton Fred Meyer',
+      image: './public/assets/volunteerpic.jpg',
       date: '04/20/19',
       location: { city: 'Beaverton', zip: 97005 },
       time: '8am',
@@ -244,6 +288,7 @@ export const getEvents = () => {
     },
     {
       name: 'Grocery Shop for Homebound Seniors-Beaverton Fred Meyer',
+      image: './public/assets/volunteerpic.jpg',
       date: '04/27/19',
       location: { city: 'Beaverton', zip: 97005 },
       time: '8am',
@@ -256,6 +301,7 @@ export const getEvents = () => {
     },
     {
       name: 'Grocery Shop for Homebound Seniors-Beaverton Fred Meyer',
+      image: './public/assets/volunteerpic.jpg',
       date: '05/03/19',
       location: { city: 'Beaverton', zip: 97005 },
       time: '8am',
@@ -268,6 +314,7 @@ export const getEvents = () => {
     },
     {
       name: 'Spruce Up Tualatin Library',
+      image: './public/assets/volunteerpic.jpg',
       date: '05/05/19',
       location: { city: 'Tualatin', zip: '97035' },
       time: '9am',
@@ -280,6 +327,7 @@ export const getEvents = () => {
     },
     {
       name: 'Animal Socialization at OHS!',
+      image: './public/assets/volunteer2pic.jpg',
       date: '05/12/19',
       location: { city: 'Portland', zip: '97211' },
       time: '1PM',
@@ -292,6 +340,7 @@ export const getEvents = () => {
     },
     {
       name: 'Animal Socialization at OHS!',
+      image: './public/assets/volunteer2pic.jpg',
       date: '04/20/19',
       location: { city: 'Portland', zip: '97211' },
       time: '1PM',
@@ -304,6 +353,7 @@ export const getEvents = () => {
     },
     {
       name: 'Animal Socialization at OHS!',
+      image: './public/assets/volunteerpic.jpg',
       date: '04/27/19',
       location: { city: 'Portland', zip: '97211' },
       time: '1PM',
