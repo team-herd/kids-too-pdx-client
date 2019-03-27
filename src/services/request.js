@@ -4,11 +4,10 @@ import { getToken } from '../selectors/session';
 const request = (path, method, body) => {
   return fetch(`${process.env.API_URL}${path}`, {
     method,
+    body: body ? JSON.stringify(body) : null,
     headers: {
-      'Content-Type': 'application/json',
       Authorization: `Bearer ${getToken(store.getState())}`
-    },
-    body: body ? JSON.stringify(body) : null
+    }
   })
     .then(res => [res.ok, res.json()])
     .then(([ok, json]) => {
@@ -18,4 +17,4 @@ const request = (path, method, body) => {
 };
 
 export const post = (path, body) => request(path, 'POST', body);
-export const get = path => request(path, 'GET');
+export const get = (path, body) => request(path, 'GET', body);

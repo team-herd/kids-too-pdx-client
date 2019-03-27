@@ -1,6 +1,7 @@
 import { get } from './request';
 
-export const getEvents = get('/events');
+export const getEvents = () => get('/events');
+console.log(getEvents());
 // export const getEvents = () => {
 //   const events = [
 //     {
