@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import styles from './Event.css';
 
 // import dollar from '../../../public/assets/dollar-symbol.png';
-
-// import dollar from '../../../public/assets/dollar-symbol.png';
-
 function Event({ event }) {
   const { name, date, time, location, cost, age, description, category, image } = event;
   // if(event.cost === 'free') {
