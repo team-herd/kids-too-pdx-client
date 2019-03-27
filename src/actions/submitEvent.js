@@ -22,9 +22,9 @@ export const updateEventName = name => ({
   payload: name
 });
 
-export const UPDATE_EVENT_DATE = 'UPDATE_EVENT_DATE';
+export const UPDATE_DATE = 'UPDATE_DATE';
 export const updateDate = date => ({
-  type: UPDATE_EVENT_DATE,
+  type: UPDATE_DATE,
   payload: date
 });
 
