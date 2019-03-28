@@ -10,7 +10,7 @@ import AboutUs from '../info/AboutUs';
 import Callback from '../../containers/auth/Callback';
 import Resources from '../resources/Resources';
 import { withSession } from '../../containers/auth/withSession';
-import SubmitEventContainer from '../../containers/SubmitEventContainer';
+import SubmitEventContainer from '../../containers/events/SubmitEventContainer';
 
 export default function App() {
   return (
