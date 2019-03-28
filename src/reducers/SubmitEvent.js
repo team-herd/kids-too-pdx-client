@@ -15,7 +15,7 @@ import {
 
 const initialState = {
   contact: {
-    name: '',
+    contactName: '',
     email: '',
     phone: ''
   },
@@ -40,7 +40,7 @@ export default function reducer(state = initialState, { payload, type }) {
     case UPDATE_CONTACT:
       return {
         ...state,
-        contact: payload
+        contact: { ...state, payload }
       };
     case UPDATE_EVENT_NAME:
       return {

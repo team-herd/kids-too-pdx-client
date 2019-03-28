@@ -7,6 +7,7 @@ function SubmitEvent({
   rrSelect, handleSubmit, handleChange, reducedRate
 }) {
   console.log('contact', contact);
+  const { contactName, email, phone } = contact;
   return (
     <>
       <form className={styles.Form} onSubmit={handleSubmit.bind(
@@ -16,15 +17,15 @@ function SubmitEvent({
           <legend>Contact Info</legend>
 
           <label>Name:
-            <input type="text" value={contact.name} name="contact" onChange={handleChange} required/>
+            <input type="text" value={contactName} name="contact" onChange={handleChange} required/>
           </label>
 
           <label name="email">Email:
-            <input type="email" value={contact.email} name="contact" onChange={handleChange} required/>
+            <input type="email" value={email} name="contact" onChange={handleChange} required/>
           </label>
 
           <label>Phone #:
-            <input type="tel" value={contact.phone} name="contact" onChange={handleChange} required/>
+            <input type="tel" value={phone} name="contact" onChange={handleChange} required/>
           </label>
         </fieldset>
         <fieldset>

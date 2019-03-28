@@ -48,9 +48,9 @@ export const updatePrice = price => ({
 });
 
 export const UPDATE_RRATE = 'UPDATE_RRATE';
-export const updateRr = rr => ({
+export const updateRr = reduced => ({
   type: UPDATE_RRATE,
-  payload: rr
+  payload: reduced
 });
 
 export const UPDATE_MINAGE = 'UPDATE_MINAGE';
