@@ -37,7 +37,7 @@ export default function reducer(state = initialState, action) {
     case UPDATE_FILTERS:
       return {
         ...state,
-        filters: { ...state.filter, ...action.payload }
+        filters: { ...state.filters, ...action.payload }
       };
     default:
       return state;
