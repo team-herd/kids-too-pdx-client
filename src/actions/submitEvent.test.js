@@ -17,7 +17,11 @@ import {
   updatePrice,
   UPDATE_PRICE,
   updateRr,
-  UPDATE_RRATE
+  UPDATE_RRATE,
+  updateMinAge,
+  UPDATE_MINAGE,
+  updateMaxAge,
+  UPDATE_MAXAGE
 } from './submitEvent';
 
 jest.mock('../services/eventsService');
@@ -111,6 +115,24 @@ describe('submit event actions', () => {
     expect(action).toEqual({
       type: UPDATE_RRATE,
       payload: false
+    });
+  });
+
+  it('updates minimum age', () => {
+    const action = updateMinAge(8);
+
+    expect(action).toEqual({
+      type: UPDATE_MINAGE,
+      payload: 8
+    });
+  });
+
+  it('updates maximum age', () => {
+    const action = updateMaxAge(15);
+
+    expect(action).toEqual({
+      type: UPDATE_MAXAGE,
+      payload: 15
     });
   });
 });
