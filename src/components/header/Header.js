@@ -15,7 +15,7 @@ function Header() {
   return (
     <>
     <section className={styles.logo}>
-      <img src='../../../public/assets/KidsTooV2.png' />
+      <img src='../../../public/assets/logo.png' /> 
     </section>
            <Router>
              <section>
