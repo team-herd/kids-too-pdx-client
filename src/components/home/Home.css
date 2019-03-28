@@ -3,8 +3,8 @@
 }
 .Home {
   position: relative;
-  z-index: 1;
-  background: url('https://static1.squarespace.com/static/59f94cf7e5dd5b2bddbad91b/t/5a4bb9808165f57ec7dbce1e/1521398304053/Screen+Shot+2018-01-01+at+12.45.14+PM.png');
+  z-index: -1;
+  background: url('../../../public/assets/background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

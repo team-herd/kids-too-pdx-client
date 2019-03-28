@@ -1,17 +1,24 @@
+.container {
+display: flex;
+justify-content: center
+}
 .Header{
   width: 95vw;
-  margin: auto;
   border-bottom: 1px solid black;
-  nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-  }
+  position: fixed;
+  z-index: 1;
+  background-color: white;;
   a {
     margin: .5em;
     text-decoration: none;
     color: black;
+    
   }
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
 }
   .logo {
      img {
@@ -22,4 +29,7 @@
       height: auto;
       margin: auto;
  }
-  }
+}
+@media only screen and (min-width: 1000px) {
+
+}
