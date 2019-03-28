@@ -12,6 +12,10 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   fetch() {
     return dispatch(fetchEvents());
+  },
+
+  onChange({ target }) {
+    console.log('chnaged', target.value);
   }
 });
 export default connect(

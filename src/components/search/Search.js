@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './Search.css';
+import PropTypes from 'prop-types';
 
-function Search() {
+function Search({ onChange }) {
   return (
     <section className={styles.Select}>
-      <select>
+      <select onChange={onChange}>
         <option value="DEFAULT" hidden>Category</option>
         <option value="sports">Sports</option>
         <option value="arts">Art</option>
@@ -25,5 +26,9 @@ function Search() {
     </section>
   );
 }
+
+Search.propTypes = {
+  onChange: PropTypes.func
+};
 
 export default Search;
