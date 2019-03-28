@@ -1,6 +1,8 @@
 .Select {
   text-align: center;
   padding: .5em;
+  position: fixed;
+  top: 7.5em;
   select {
     display: block;
     margin: auto;
@@ -17,17 +19,14 @@
   label {
     font-weight: 800;
   }
-  form {
-    width: 75vw;
-    margin: auto;
-  }
 }
   
 @media only screen and (min-width: 1000px) {
   .Select {
+    background-color: white;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
-    margin: 1em;
     label {
       display: flex;
       justify-content: center;
