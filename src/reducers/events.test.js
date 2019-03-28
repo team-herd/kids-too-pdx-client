@@ -3,7 +3,7 @@ import reducer from './events';
 jest.mock('../services/eventsService');
 
 describe('events reducers', () => {
-  let state = {
+  const state = {
     events: [],
     loading: false,
     filters: {}
