@@ -18,7 +18,7 @@ function Event({ event }) {
         <p>Time: @ {time}</p>
         <p><span>Location:</span>{location}</p>
         <p><span>Cost:</span>{price}</p>
-        <p><span>Age:</span>{ageMin}-{ageMax}</p>
+        <p><span>Age:</span>{ageMin} - {ageMax}</p>
         <p>{category}</p>
         {/* <p>{description}</p> */}
       </section>
