@@ -11,7 +11,9 @@ import {
   updateDate,
   UPDATE_DATE,
   updateTime,
-  UPDATE_TIME
+  UPDATE_TIME,
+  updateLocation,
+  UPDATE_LOCATION
 } from './submitEvent';
 
 jest.mock('../services/eventsService');
@@ -72,6 +74,21 @@ describe('submit event actions', () => {
     expect(action).toEqual({
       type: UPDATE_TIME,
       payload: '2pm'
+    });
+  });
+
+  it('updates location', () => {
+    const action = updateLocation({
+      street: '123 Main st.',
+      zip: '97223'
+    });
+
+    expect(action).toEqual({
+      type: UPDATE_LOCATION,
+      payload: {
+        street: '123 Main st.',
+        zip: '97223'
+      }
     });
   });
 });
