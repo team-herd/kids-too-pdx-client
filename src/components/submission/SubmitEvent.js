@@ -17,15 +17,15 @@ function SubmitEvent({
           <legend>Contact Info</legend>
 
           <label>Name:
-            <input type="text" value={contactName} name="contact" onChange={handleChange} required/>
+            <input type="text" value={contactName} name="contactName" onChange={handleChange} required/>
           </label>
 
           <label name="email">Email:
-            <input type="email" value={email} name="contact" onChange={handleChange} required/>
+            <input type="email" value={email} name="email" onChange={handleChange} required/>
           </label>
 
           <label>Phone #:
-            <input type="tel" value={phone} name="contact" onChange={handleChange} required/>
+            <input type="tel" value={phone} name="phone" onChange={handleChange} required/>
           </label>
         </fieldset>
         <fieldset>
