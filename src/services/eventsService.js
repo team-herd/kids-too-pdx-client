@@ -7,6 +7,5 @@ export const getEvents = () => get('/events');
 export const getFilteredEvents = filters => {
   let route = '/events/query/q?';
   Object.keys(filters).every(key => route += `${key}=${filters[key]}&`);
-  console.log('route', route);
   return get(route);
 };

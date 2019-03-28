@@ -6,6 +6,7 @@ import {
   updateFilters,
   fetchFilteredEvents
 } from '../actions/events';
+import { getFilters } from '../selectors/events';
 import { withFetch } from '../components/withFetch';
 import store from '../store';
 
@@ -27,8 +28,7 @@ const mapDispatchToProps = dispatch => ({
 
   onSubmit(event) {
     event.preventDefault();
-    console.log('submitted', store.getState().events.filters);
-    return dispatch(fetchFilteredEvents(store.getState().events.filters));
+    return dispatch(fetchFilteredEvents(getFilters(store.getState())));
   }
 });
 export default connect(
