@@ -4,7 +4,7 @@ import styles from './Event.css';
 
 // import dollar from '../../../public/assets/dollar-symbol.png';
 function Event({ event }) {
-  const { name, date, time, location, cost, age, description, category, image } = event;
+  const { name, date, time, location, price, ageMin, ageMax, description, category, image } = event;
   // if(event.cost === 'free') {
   //   return <img src={dollar} alt="dollar sign"/>;
   // }
@@ -16,7 +16,7 @@ function Event({ event }) {
         <a href={`/events/${event._id}`}><h2>{name}</h2></a>
         <p>{date} @ {time}</p>
         <p><span>Location:</span>{location}</p>
-        <p><span>Cost:</span>{cost}</p>
+        <p><span>Cost:</span>{price}</p>
         <p><span>Age:</span>{age}</p>
         <p>{category}</p>
         <p>{description}</p>
