@@ -1,13 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Home from '../home/Home';
-// import EventDetailContainer from '../../containers/EventDetailContainer';
-// import AdminEvents from '../admin/AdminEvents';
-// import AboutUs from '../info/AboutUs';
-// import Callback from '../../containers/auth/Callback';
-// import Contact from '../info/Contact';
 import styles from './Header.css';
-// import Resources from '../resources/Resources';
 
 function Header() {
   return (
@@ -28,4 +21,5 @@ function Header() {
       </>
   );
 }
+
 export default Header;
