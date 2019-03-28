@@ -5,7 +5,8 @@ import {
   FETCH_EVENTS_FULFILLED,
   FETCH_EVENTS_REJECTED
 } from './events';
-import { getEvents } from '../services/eventsService';
+
+jest.mock('../services/eventsService');
 
 describe('actions test', () => {
   it('fetch events', () => {
@@ -15,7 +16,7 @@ describe('actions test', () => {
       pendingType: FETCH_EVENTS_PENDING,
       fulfilledType: FETCH_EVENTS_FULFILLED,
       rejectedType: FETCH_EVENTS_REJECTED,
-      payload: getEvents()
+      payload: expect.any(Promise)
     });
   });
 });
