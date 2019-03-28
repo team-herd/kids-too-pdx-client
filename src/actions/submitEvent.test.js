@@ -7,7 +7,9 @@ import {
   updateContact,
   UPDATE_CONTACT,
   updateEventName,
-  UPDATE_EVENT_NAME
+  UPDATE_EVENT_NAME,
+  updateDate,
+  UPDATE_DATE
 } from './submitEvent';
 
 jest.mock('../services/eventsService');
@@ -50,6 +52,15 @@ describe('submit event actions', () => {
     expect(action).toEqual({
       type: UPDATE_EVENT_NAME,
       payload: 'The New Name'
+    });
+  });
+
+  it('updates event date', () => {
+    const action = updateDate(Date.now());
+
+    expect(action).toEqual({
+      type: UPDATE_DATE,
+      payload: expect.any(Number)
     });
   });
 });
