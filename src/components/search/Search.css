@@ -17,6 +17,10 @@
   label {
     font-weight: 800;
   }
+  form {
+    width: 75vw;
+    margin: auto;
+  }
 }
   
 @media only screen and (min-width: 1000px) {
