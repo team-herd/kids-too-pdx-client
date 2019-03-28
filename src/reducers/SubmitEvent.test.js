@@ -9,7 +9,7 @@ describe('Submit Event reducers', () => {
     date: Date.now(),
     time: '',
     location: {},
-    price: '',
+    price: 0,
     reducedRate: true,
     minAge: 0,
     maxAge: 0,
@@ -25,6 +25,150 @@ describe('Submit Event reducers', () => {
 
     expect(reducer(state, action)).toEqual({
       ...state
+    });
+  });
+
+  it('updates contact', () => {
+    const action = {
+      type: 'UPDATE_CONTACT',
+      payload: {
+        name: 'Joe',
+        email: 'joe@email.com'
+      }
+    };
+
+    expect(reducer(state, action)).toEqual({
+      ...state,
+      contact: {
+        name: 'Joe',
+        email: 'joe@email.com'
+      }
+    });
+  });
+
+  it('updates event name', () => {
+    const action = {
+      type: 'UPDATE_EVENT_NAME',
+      payload: 'Joe'
+    };
+
+    expect(reducer(state, action)).toEqual({
+      ...state,
+      name: 'Joe'
+    });
+  });
+
+  it('updates date', () => {
+    const action = {
+      type: 'UPDATE_DATE',
+      payload: Date.now()
+    };
+
+    expect(reducer(state, action)).toEqual({
+      ...state,
+      date: expect.any(Number)
+    });
+  });
+
+  it('updates time', () => {
+    const action = {
+      type: 'UPDATE_TIME',
+      payload: '2pm'
+    };
+
+    expect(reducer(state, action)).toEqual({
+      ...state,
+      time: '2pm'
+    });
+  });
+
+  it('updates location', () => {
+    const action = {
+      type: 'UPDATE_LOCATION',
+      payload: {
+        street: '123 Main St.',
+        zip: 97223
+      }
+    };
+
+    expect(reducer(state, action)).toEqual({
+      ...state,
+      location: {
+        street: '123 Main St.',
+        zip: 97223
+      }
+    });
+  });
+
+  it('updates price', () => {
+    const action = {
+      type: 'UPDATE_PRICE',
+      payload: 150
+    };
+
+    expect(reducer(state, action)).toEqual({
+      ...state,
+      price: 150
+    });
+  });
+
+  it('updates reduced rate', () => {
+    const action = {
+      type: 'UPDATE_RRATE',
+      payload: false
+    };
+
+    expect(reducer(state, action)).toEqual({
+      ...state,
+      reducedRate: false
+    });
+  });
+
+  it('updates minimum age', () => {
+    const action = {
+      type: 'UPDATE_MINAGE',
+      payload: 9
+    };
+
+    expect(reducer(state, action)).toEqual({
+      ...state,
+      minAge: 9
+    });
+  });
+
+  it('updates maximum age', () => {
+    const action = {
+      type: 'UPDATE_MAXAGE',
+      payload: 15
+    };
+
+    expect(reducer(state, action)).toEqual({
+      ...state,
+      maxAge: 15
+    });
+  });
+
+  it('updates category', () => {
+    const action = {
+      type: 'UPDATE_CATEGORY',
+      payload: 'Art'
+    };
+
+    expect(reducer(state, action)).toEqual({
+      ...state,
+      category: 'Art'
+    });
+  });
+
+  it('updates description', () => {
+    const action = {
+      type: 'UPDATE_DESCRIPTION',
+      payload: 'The bestest event ever!'
+    };
+
+    expect(reducer(state, action)).toEqual({
+      ...state,
+      description: 'The bestest event ever!'
     });
   });
 });
