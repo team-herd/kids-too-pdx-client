@@ -4,12 +4,14 @@ import {
   FETCH_EVENTS_FULFILLED,
   FETCH_FILTERED_EVENTS,
   FETCH_FILTERED_EVENTS_PENDING,
-  FETCH_FILTERED_EVENTS_FULFILLED
+  FETCH_FILTERED_EVENTS_FULFILLED,
+  UPDATE_FILTERS
 } from '../actions/events';
 
 const initialState = {
   events: [],
-  loading: false
+  loading: false,
+  filters: {}
 };
 
 export default function reducer(state = initialState, action) {
@@ -31,6 +33,11 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         loading: false
+      };
+    case UPDATE_FILTERS:
+      return {
+        ...state,
+        filters: { ...state.filter, ...action.payload }
       };
     default:
       return state;

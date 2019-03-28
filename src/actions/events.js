@@ -19,3 +19,9 @@ export const [
   FETCH_FILTERED_EVENTS_FULFILLED,
   FETCH_FILTERED_EVENTS_REJECTED
 ] = createAction('FETCH_FILTERED_EVENTS', getFilteredEvents);
+
+export const UPDATE_FILTERS = 'UPDATE_FILTERS';
+export const updateFilters = filter => ({
+  type: UPDATE_FILTERS,
+  payload: filter
+});

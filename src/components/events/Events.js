@@ -4,13 +4,16 @@ import PropTypes from 'prop-types';
 import Search from '../search/Search';
 import styles from './Events.css';
 
-function Events({ events, onChange }) {
+function Events({ events, onChange, onSubmit }) {
   const listOfEvents = events.map((event, i) => {
     return <li key={i}><Event event={event} /></li>;
   });
   return (
   <>
-    <Search onChange={onChange}/>
+    <Search 
+      onChange={onChange}
+      onSubmit={onSubmit}
+    />
     <section className={styles.Event}>
       <ul>
         {listOfEvents}
@@ -21,6 +24,7 @@ function Events({ events, onChange }) {
 }
 Events.propTypes = {
   events: PropTypes.array,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  onSubmit: PropTypes.func
 };
 export default Events;
