@@ -25,7 +25,7 @@ const initialState = {
     phone: ''
   },
   name: '',
-  date: undefined,
+  date: '',
   time: '',
   location: {
     venue: '',
@@ -34,9 +34,9 @@ const initialState = {
     zipcode: ''
   },
   price: '',
-  reducedRate: true,
-  minAge: undefined,
-  maxAge: undefined,
+  reducedRate: false,
+  minAge: '',
+  maxAge: '',
   category: '',
   description: ''
 };
@@ -55,17 +55,17 @@ export default function reducer(state = initialState, { payload, type }) {
     case UPDATE_CONTACT_NAME:
       return {
         ...state,
-        contact: { ...state, contactName: payload }
+        contact: { ...state.contact, contactName: payload }
       };
     case UPDATE_CONTACT_PHONE:
       return {
         ...state,
-        contact: { ...state, phone: payload }
+        contact: { ...state.contact, phone: payload }
       };
     case UPDATE_CONTACT_EMAIL:
       return {
         ...state,
-        contact: { ...state, email: payload }
+        contact: { ...state.contact, email: payload }
       };
     case UPDATE_DATE:
       return {
@@ -80,22 +80,22 @@ export default function reducer(state = initialState, { payload, type }) {
     case UPDATE_LOCATION_VENUE:
       return {
         ...state,
-        location: { ...state, venue: payload }
+        location: { ...state.location, venue: payload }
       };
     case UPDATE_LOCATION_ADDRESS:
       return {
         ...state,
-        location: { ...state, address: payload }
+        location: { ...state.location, address: payload }
       };
     case UPDATE_LOCATION_STATE:
       return {
         ...state,
-        location: { ...state, state: payload }
+        location: { ...state.location, state: payload }
       };
     case UPDATE_LOCATION_ZIPCODE:
       return {
         ...state,
-        location: { ...state, zipcode: payload }
+        location: { ...state.location, zipcode: payload }
       };
     case UPDATE_PRICE:
       return {

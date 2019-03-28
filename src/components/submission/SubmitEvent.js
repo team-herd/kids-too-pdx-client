@@ -11,7 +11,7 @@ function SubmitEvent({
   return (
     <>
       <form className={styles.Form} onSubmit={handleSubmit.bind(
-        null, contact, name, date, time, location, price, minAge, maxAge, category, description
+        null, contact, name, date, time, location, price, minAge, maxAge, reducedRate, category, description
       )}>
         <fieldset>
           <legend>Contact Info</legend>
@@ -36,7 +36,7 @@ function SubmitEvent({
           </label>
 
           <label>Date:
-            <input type="text" value={date} onChange={handleChange} placeholder="yyyy-MM-dd"required/>
+            <input type="date" value={date} onChange={handleChange} name="date" required/>
           </label>
 
           <label>Time:
@@ -56,7 +56,7 @@ function SubmitEvent({
           </label>
 
           <label className={styles.radio}>Reduced Rate Available:
-            <input type="radio" onChange={rrSelect} value={reducedRate} checked={reducedRate === true}/>
+            <input type="checkbox" onChange={rrSelect} value={reducedRate}/>
           </label>
 
           <label>Age Range:
@@ -90,12 +90,21 @@ function SubmitEvent({
 SubmitEvent.propTypes = {
   contact: PropTypes.object,
   name: PropTypes.string,
-  date: PropTypes.number,
+  date: PropTypes.string,
   time: PropTypes.string,
   location: PropTypes.object,
-  price: PropTypes.string,
-  minAge: PropTypes.number,
-  maxAge: PropTypes.number,
+  price: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  minAge: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  maxAge: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
   reducedRate: PropTypes.bool,
   category: PropTypes.string,
   description: PropTypes.string,

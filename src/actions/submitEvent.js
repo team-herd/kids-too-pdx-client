@@ -81,7 +81,7 @@ export const updateLocationZipcode = locationZipcode => ({
 export const UPDATE_PRICE = 'UPDATE_PRICE';
 export const updatePrice = price => ({
   type: UPDATE_PRICE,
-  payload: price
+  payload: Number.parseFloat(price)
 });
 
 export const UPDATE_RRATE = 'UPDATE_RRATE';
@@ -93,13 +93,13 @@ export const updateRr = reduced => ({
 export const UPDATE_MINAGE = 'UPDATE_MINAGE';
 export const updateMinAge = minAge => ({
   type: UPDATE_MINAGE,
-  payload: minAge
+  payload: Number.parseInt(minAge)
 });
 
 export const UPDATE_MAXAGE = 'UPDATE_MAXAGE';
 export const updateMaxAge = maxAge => ({
   type: UPDATE_MAXAGE,
-  payload: maxAge
+  payload: Number.parseInt(maxAge)
 });
 
 export const UPDATE_CATEGORY = 'UPDATE_CATEGORY';

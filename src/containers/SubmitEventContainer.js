@@ -9,19 +9,28 @@ class SubmitContainer extends PureComponent {
   static propTypes = {
     contact: PropTypes.object,
     name: PropTypes.string,
-    date: PropTypes.number,
+    date: PropTypes.string,
     time: PropTypes.string,
     location: PropTypes.object,
-    price: PropTypes.string,
-    minAge: PropTypes.number,
-    maxAge: PropTypes.number,
+    price: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]),
+    minAge: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]),
+    maxAge: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]),
     reducedRate: PropTypes.bool,
     category: PropTypes.string,
     description: PropTypes.string
   };
-  render()  {
+  render() {
     return (
-      <SubmitEvent {...this.props}/>
+      <SubmitEvent {...this.props} />
     );
   }
 }
@@ -68,11 +77,10 @@ const mapDispatchToProps = dispatch => ({
     event.preventDefault();
     dispatch(createEvent({ contact, name, date, time, location, price, minAge, maxAge, reducedRate, category, description }));
   },
-  
-  rrSelect(event) {
-    this.setState({
-      reducedRate: event.target.value
-    });
+
+  rrSelect({ target }) {
+    console.log('hi');
+    dispatch(updateRr(target.checked));
   }
 });
 
