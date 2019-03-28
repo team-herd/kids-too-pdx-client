@@ -41,6 +41,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   handleChange({ target }) {
+    console.log(target.value, 'target');
     const factoryMethod = {
       contact: updateContact,
       name: updateEventName,

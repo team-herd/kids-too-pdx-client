@@ -6,6 +6,7 @@ function SubmitEvent({
   contact, name, date, time, location, price, minAge, maxAge, category, description,
   rrSelect, handleSubmit, handleChange, reducedRate
 }) {
+  console.log('contact', contact);
   return (
     <>
       <form className={styles.Form} onSubmit={handleSubmit.bind(
@@ -15,26 +16,26 @@ function SubmitEvent({
           <legend>Contact Info</legend>
 
           <label>Name:
-            <input type="text" value={contact.name} name="contact" onChange={handleChange} required />
+            <input type="text" value={contact.name} name="contact" onChange={handleChange} required/>
           </label>
 
           <label name="email">Email:
-            <input type="email" value={contact.email} name="contact" onChange={handleChange} required />
+            <input type="email" value={contact.email} name="contact" onChange={handleChange} required/>
           </label>
 
           <label>Phone #:
-            <input type="tel" value={contact.phone} name="contact" onChange={handleChange} required />
+            <input type="tel" value={contact.phone} name="contact" onChange={handleChange} required/>
           </label>
         </fieldset>
         <fieldset>
           <legend>Event Info</legend>
 
           <label>Name:
-            <input type="text" value={name} name="name" onChange={handleChange} required />
+            <input type="text" value={name} name="name" onChange={handleChange} required/>
           </label>
 
           <label>Date:
-            <input type="date" value={date} onChange={handleChange} required />
+            <input type="string" value={date} onChange={handleChange} placeholder="yyyy-MM-dd"required/>
           </label>
 
           <label>Time:
@@ -53,7 +54,7 @@ function SubmitEvent({
             <input type="number" placeholder="$" value={price} onChange={handleChange} required/>
           </label>
 
-          <label>Reduced Rate Available:
+          <label className={styles.radio}>Reduced Rate Available:
             <input type="radio" onChange={rrSelect} value={reducedRate} checked={reducedRate === true}/>
           </label>
 

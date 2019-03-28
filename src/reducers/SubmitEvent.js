@@ -14,15 +14,19 @@ import {
 } from '../actions/submitEvent';
 
 const initialState = {
-  contact: {},
+  contact: {
+    name: '',
+    email: '',
+    phone: ''
+  },
   name: '',
-  date: Date.now(),
+  date: undefined,
   time: '',
   location: {},
   price: '',
   reducedRate: true,
-  minAge: 0,
-  maxAge: 0,
+  minAge: undefined,
+  maxAge: undefined,
   category: '',
   description: ''
 };

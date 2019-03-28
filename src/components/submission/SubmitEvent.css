@@ -1,6 +1,6 @@
 .Form {
   display: block;
-  padding: .5em;
+  margin: .5em;
   legend {
     text-align: center;
   }
@@ -11,14 +11,21 @@
     width: 100%;
   }
   fieldset {
-    margin: .5em;
+    margin-bottom: .5em;
   }
   button {
-    margin-left: 40%;
-    margin-right: 40%;
+    display: block;
+    margin: auto;
     padding: 1em;
     border-radius: 5px;
     background-color: white;
   }
-
+  
+}
+.radio {
+  display: flex;
+  input {
+    width: 1em;
+    margin-left: .75em;
+  }
 }
