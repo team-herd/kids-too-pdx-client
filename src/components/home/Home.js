@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Home.css';
-import HomeContainer from '../../containers/HomeContainer';
+import HomeContainer from '../../containers/events/HomeContainer';
 
 function Home() {
   return (
