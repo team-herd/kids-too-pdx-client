@@ -55,7 +55,7 @@ export default function reducer(state = initialState, { payload, type }) {
     case UPDATE_CONTACT_NAME:
       return {
         ...state,
-        contact: { ...state, name: payload }
+        contact: { ...state, contactName: payload }
       };
     case UPDATE_CONTACT_PHONE:
       return {
