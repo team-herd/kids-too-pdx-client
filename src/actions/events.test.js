@@ -9,6 +9,8 @@ import {
   FETCH_FILTERED_EVENTS_FULFILLED,
   FETCH_FILTERED_EVENTS_REJECTED,
   FETCH_FILTERED_EVENTS,
+  updateFilters,
+  UPDATE_FILTERS
 } from './events';
 
 jest.mock('../services/eventsService');
@@ -36,6 +38,21 @@ describe('actions test', () => {
       fulfilledType: FETCH_FILTERED_EVENTS_FULFILLED,
       rejectedType: FETCH_FILTERED_EVENTS_REJECTED,
       payload: expect.any(Promise)
+    });
+  });
+
+  it('updates filters', () => {
+    const action = updateFilters({
+      ageMin: 8,
+      ageMax: 15
+    });
+
+    expect(action).toEqual({
+      type: UPDATE_FILTERS,
+      payload: {
+        ageMin: 8,
+        ageMax: 15
+      }
     });
   });
 });
