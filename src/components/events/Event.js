@@ -4,13 +4,9 @@ import styles from './Event.css';
 // import EventDetail from '../events/EventDetail';
 import { Link } from 'react-router-dom';
 
-// import dollar from '../../../public/assets/dollar-symbol.png';
 function Event({ event, details }) {
-  // const { name, date, time, price, ageMin, ageMax, description, category, image } = event;
-  // if(event.cost === 'free') {
-  //   return <img src={dollar} alt="dollar sign"/>;
-  // }
-  // console.log(event.location, 'location');
+  const date = new Date(event.date);
+  event.dateDisplay = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
 
   return (
 
@@ -33,4 +29,5 @@ Event.propTypes = {
   event: PropTypes.object.isRequired,
   details: PropTypes.boolean
 };
+
 export default Event;
