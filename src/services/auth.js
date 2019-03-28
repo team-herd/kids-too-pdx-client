@@ -11,6 +11,7 @@ const auth0 = new WebAuth({
 export const login = () => {
   return auth0.authorize();
 };
+
 export const logout = () => {
   return auth0.logout();
 };
