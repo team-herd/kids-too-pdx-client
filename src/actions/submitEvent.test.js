@@ -9,7 +9,9 @@ import {
   updateEventName,
   UPDATE_EVENT_NAME,
   updateDate,
-  UPDATE_DATE
+  UPDATE_DATE,
+  updateTime,
+  UPDATE_TIME
 } from './submitEvent';
 
 jest.mock('../services/eventsService');
@@ -61,6 +63,15 @@ describe('submit event actions', () => {
     expect(action).toEqual({
       type: UPDATE_DATE,
       payload: expect.any(Number)
+    });
+  });
+
+  it('updates time', () => {
+    const action = updateTime('2pm');
+
+    expect(action).toEqual({
+      type: UPDATE_TIME,
+      payload: '2pm'
     });
   });
 });
