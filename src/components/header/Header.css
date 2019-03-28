@@ -1,7 +1,7 @@
 .container {
 display: flex;
 justify-content: center;
-height: 10em;
+height: 8em;
 section {
   width: 100vw;
 }
