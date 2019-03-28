@@ -11,3 +11,5 @@ export const getFilteredEvents = filters => {
   console.log('route', route);
   return get(route);
 };
+
+export const getEvent = id => get(`/events/${id}`);
