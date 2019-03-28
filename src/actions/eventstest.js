@@ -1,4 +1,10 @@
-import { FETCH_EVENTS, fetchEvents, FETCH_EVENTS_PENDING, FETCH_EVENTS_FULFILLED, FETCH_EVENTS_REJECTED } from './events';
+import {
+  fetchEvents,
+  FETCH_EVENTS,
+  FETCH_EVENTS_PENDING,
+  FETCH_EVENTS_FULFILLED,
+  FETCH_EVENTS_REJECTED
+} from './events';
 import { getEvents } from '../services/eventsService';
 
 describe('actions test', () => {
