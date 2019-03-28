@@ -2,14 +2,15 @@
   display: flex;
   justify-content: center;
   ul {
-    width: 95vw;
+    width: 70vw;
     list-style: none;
     padding: 0;
     li {
       padding: 1em;
       border: 1px solid black;
       border-radius: 10px;
+      background-color: white;
+      margin-bottom: 0.8em;
     }
   }
-
 }

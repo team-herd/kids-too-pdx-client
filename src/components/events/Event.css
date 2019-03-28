@@ -14,11 +14,10 @@
   }
   img {
     display: block;
-    height: 40vw;
+    height: 20vh;
     width: auto;
     margin: auto;
     border-radius: 5px;
-    box-shadow: 2px 2px gray;;
   }
   
 }

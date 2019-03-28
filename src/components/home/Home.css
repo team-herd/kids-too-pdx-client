@@ -1,3 +1,14 @@
 * {
   font-family: 'Raleway', sans-serif;
 }
+.Home {
+  position: relative;
+  z-index: 1;
+}
+.Home:before {
+  position: absolute;
+  z-index: -1;
+  background-image: url('https://previews.123rf.com/images/suchota/suchota1503/suchota150300413/37233779-abstract-wallpaper-oil-painting-background-with-with-palette-knife-marks.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

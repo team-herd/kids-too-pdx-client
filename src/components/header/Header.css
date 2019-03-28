@@ -13,7 +13,11 @@
     color: black;
   }
 }
-.logo {
-  margin: 0;
-  text-align: center;
-}
+  .logo {
+     img {
+      width: 20em; 
+      display: flex; 
+      height: auto;
+      margin: auto;
+ }
+  }

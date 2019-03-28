@@ -1,7 +1,12 @@
 .Contact {
-  padding: 100px;
+  padding: 20em;
+  margin: auto;
   text-align: center;
+  background-image: url('https://www.setaswall.com/wp-content/uploads/2018/11/iPad-Pro-2018-Stock-Wallpaper-004-3208x3208.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 image {
-  height: 200%;
+  height: 500%;
+  
 }
