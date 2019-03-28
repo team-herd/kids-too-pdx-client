@@ -28,18 +28,7 @@ function Header() {
               <Link to='/resources'>Resources</Link>
             </nav>
           </header>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            {/* <Route exact path='/submit-event' component={withSession(SubmitEvent)} /> */}
-            <Route exact path='/events/:id' component={EventDetailContainer} />
-            {/* <Route exact path='/submit-event' component={withSession(SubmitEventContainer)} /> */}
-            <Route exact path='/admin' component={AdminEvents} />
-            <Route exact path='/admin/event/:id' component={AdminEvents} />
-            <Route exact path='/contact' component={Contact} /> 
-            <Route exact path='/aboutus' component={AboutUs} /> 
-            <Route exact path='/callback' component={Callback} /> 
-            <Route exact path='/resources' component={Resources} />
-          </Switch>
+          
         </section>
       </Router>
     </>

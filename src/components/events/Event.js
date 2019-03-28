@@ -13,7 +13,7 @@ function Event({ event }) {
     <>
       <section className={styles.Event}>
         <img src={image} alt='event picture' />
-        <a href={`/events/${event._id}`} key={event._id}><h2>{name}</h2></a>
+        <a href={`/events/${event._id}`}><h2>{name}</h2></a>
         <p><span>Date:</span>{date}</p>
         <p>Time: @ {time}</p>
         <p><span>Location:</span>{location}</p>

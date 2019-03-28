@@ -3,8 +3,7 @@
 }
 .Home {
   position: relative;
-  z-index: -1;
-  background: url('../../../public/assets/background.png');
+    background: url('../../../public/assets/background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
