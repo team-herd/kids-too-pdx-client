@@ -13,7 +13,9 @@ import {
   updateTime,
   UPDATE_TIME,
   updateLocation,
-  UPDATE_LOCATION
+  UPDATE_LOCATION,
+  updatePrice,
+  UPDATE_PRICE
 } from './submitEvent';
 
 jest.mock('../services/eventsService');
@@ -89,6 +91,15 @@ describe('submit event actions', () => {
         street: '123 Main st.',
         zip: '97223'
       }
+    });
+  });
+
+  it('updates price', () => {
+    const action = updatePrice(250);
+
+    expect(action).toEqual({
+      type: UPDATE_PRICE,
+      payload: 250
     });
   });
 });
