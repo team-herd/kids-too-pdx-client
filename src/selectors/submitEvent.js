@@ -10,7 +10,10 @@ export const getLocation = state => state.submit.location;
 
 export const getPrice = state => state.submit.price;
 
-export const getReduced = state => state.submit.rr;
+export const getReduced = state => {
+  console.log(state, 'state');
+  return state.submit.reducedRate;
+};
 
 export const getMinAge = state => state.submit.minAge;
 
