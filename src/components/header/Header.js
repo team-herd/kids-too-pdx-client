@@ -7,7 +7,7 @@ import EventDetailContainer from '../../containers/EventDetailContainer';
 import AdminEvents from '../admin/AdminEvents';
 import AboutUs from '../info/AboutUs';
 import Callback from '../../containers/auth/Callback';
-import { withSession } from '../../containers/auth/withSession';
+// import { withSession } from '../../containers/auth/withSession';
 import Contact from '../info/Contact';
 import styles from './Header.css';
 
