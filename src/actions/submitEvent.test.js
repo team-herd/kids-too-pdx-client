@@ -21,7 +21,11 @@ import {
   updateMinAge,
   UPDATE_MINAGE,
   updateMaxAge,
-  UPDATE_MAXAGE
+  UPDATE_MAXAGE,
+  updateCategory,
+  UPDATE_CATEGORY,
+  updateDescription,
+  UPDATE_DESCRIPTION
 } from './submitEvent';
 
 jest.mock('../services/eventsService');
@@ -133,6 +137,24 @@ describe('submit event actions', () => {
     expect(action).toEqual({
       type: UPDATE_MAXAGE,
       payload: 15
+    });
+  });
+
+  it('updates category', () => {
+    const action = updateCategory('Art');
+
+    expect(action).toEqual({
+      type: UPDATE_CATEGORY,
+      payload: 'Art'
+    });
+  });
+
+  it('updates description', () => {
+    const action = updateDescription('It is a whateves event');
+
+    expect(action).toEqual({
+      type: UPDATE_DESCRIPTION,
+      payload: 'It is a whateves event'
     });
   });
 });
