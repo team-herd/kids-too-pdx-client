@@ -10,16 +10,29 @@ export const [
   CREATE_EVENT_ERROR
 ] = createAction('CREATE_EVENT', postEvent);
 
-export const UPDATE_CONTACT = 'UPDATE_CONTACT';
-export const updateContact = contact => ({
-  type: UPDATE_CONTACT,
-  payload: contact
-});
-
 export const UPDATE_EVENT_NAME = 'UPDATE_EVENT_NAME';
 export const updateEventName = name => ({
   type: UPDATE_EVENT_NAME,
   payload: name
+});
+
+export const UPDATE_CONTACT_NAME = 'UPDATE_CONTACT_NAME';
+export const updateContactName = contactName => ({
+  type: UPDATE_CONTACT_NAME,
+  payload: contactName
+});
+
+export const UPDATE_CONTACT_PHONE = 'UPDATE_CONTACT_PHONE';
+export const updateContactPhone = contactPhone => ({
+  type: UPDATE_CONTACT_PHONE,
+  payload: contactPhone
+});
+
+
+export const UPDATE_CONTACT_EMAIL = 'UPDATE_CONTACT_EMAIL';
+export const updateContactEmail = contactEmail => ({
+  type: UPDATE_CONTACT_EMAIL,
+  payload: contactEmail
 });
 
 export const UPDATE_DATE = 'UPDATE_DATE';
@@ -34,10 +47,34 @@ export const updateTime = time => ({
   payload: time
 });
 
-export const UPDATE_LOCATION = 'UPDATE_LOCATION';
-export const updateLocation = location => ({
-  type: UPDATE_LOCATION,
-  payload: location
+export const UPDATE_LOCATION_VENUE = 'UPDATE_LOCATION_VENUE';
+export const updateLocationVenue = locationVenue => ({
+  type: UPDATE_LOCATION_VENUE,
+  payload: locationVenue
+});
+
+export const UPDATE_LOCATION_ADDRESS = 'UPDATE_LOCATION_ADDRESS';
+export const updateLocationAddress = locationAddress => ({
+  type: UPDATE_LOCATION_ADDRESS,
+  payload: locationAddress
+});
+
+export const UPDATE_LOCATION_CITY = 'UPDATE_LOCATION_CITY';
+export const updateLocationCity = locationCity => ({
+  type: UPDATE_LOCATION_CITY,
+  payload: locationCity
+});
+
+export const UPDATE_LOCATION_STATE = 'UPDATE_LOCATION_STATE';
+export const updateLocationState = locationState => ({
+  type: UPDATE_LOCATION_STATE,
+  payload: locationState
+});
+
+export const UPDATE_LOCATION_ZIPCODE = 'UPDATE_LOCATION_ZIPCODE';
+export const updateLocationZipcode = locationZipcode => ({
+  type: UPDATE_LOCATION_ZIPCODE,
+  payload: locationZipcode
 });
 
 
