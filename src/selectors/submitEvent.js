@@ -11,7 +11,6 @@ export const getLocation = state => state.submit.location;
 export const getPrice = state => state.submit.price;
 
 export const getReduced = state => {
-  console.log(state, 'state');
   return state.submit.reducedRate;
 };
 
