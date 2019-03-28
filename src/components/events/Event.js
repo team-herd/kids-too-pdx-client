@@ -1,15 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Event.css';
+// import EventDetail from '../events/EventDetail';
 import { Link } from 'react-router-dom';
 // import EventDescription from './EventDescription';
 // import dollar from '../../../public/assets/dollar-symbol.png';
-function Event({ event }) {
-  // const { name, date, time, price, ageMin, ageMax, description, category, image } = event;
-  // if(event.cost === 'free') {
-  //   return <img src={dollar} alt="dollar sign"/>;
-  // }
-  // console.log(event.location, 'location');
+function Event({ event, details }) {
   if(event.ageMin && event.ageMax) {
     event.age = `${event.ageMin}-${event.ageMax}`;
   } else if(event.ageMin) {
@@ -17,6 +13,9 @@ function Event({ event }) {
   } else if(event.ageMax) {
     event.age = `${event.ageMax}`;
   }
+  const date = new Date(event.date);
+  event.dateDisplay = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+  
   return (
     <>
       <section className={styles.Event}>
@@ -33,6 +32,8 @@ function Event({ event }) {
   );
 }
 Event.propTypes = {
-  event: PropTypes.object.isRequired
+  event: PropTypes.object.isRequired,
+  details: PropTypes.boolean
 };
+
 export default Event;

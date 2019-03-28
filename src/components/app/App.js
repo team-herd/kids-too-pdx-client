@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import 'normalize.css';
 import Home from '../home/Home';
-import EventDetailContainer from '../../containers/EventDetailContainer';
+import EventDetailContainer from '../../containers/events/EventDetailContainer';
 import Contact from '../info/Contact';
 import AboutUs from '../info/AboutUs';
 import Callback from '../../containers/auth/Callback';
