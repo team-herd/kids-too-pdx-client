@@ -15,7 +15,9 @@ import {
   updateLocation,
   UPDATE_LOCATION,
   updatePrice,
-  UPDATE_PRICE
+  UPDATE_PRICE,
+  updateRr,
+  UPDATE_RRATE
 } from './submitEvent';
 
 jest.mock('../services/eventsService');
@@ -100,6 +102,15 @@ describe('submit event actions', () => {
     expect(action).toEqual({
       type: UPDATE_PRICE,
       payload: 250
+    });
+  });
+
+  it('updates reduced rate', () => {
+    const action = updateRr(false);
+
+    expect(action).toEqual({
+      type: UPDATE_RRATE,
+      payload: false
     });
   });
 });
