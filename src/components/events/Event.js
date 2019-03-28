@@ -2,12 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Event.css';
 
-// import dollar from '../../../public/assets/dollar-symbol.png';
 function Event({ event }) {
-  const { name, date, time, location, price, ageMin, ageMax, description, category, image } = event;
-  // if(event.cost === 'free') {
-  //   return <img src={dollar} alt="dollar sign"/>;
-  // }
+  const {
+    name,
+    date,
+    time,
+    location,
+    price, ageMin,
+    ageMax,
+    description,
+    category,
+    image } = event;
+
   return (
 
     <>
@@ -27,4 +33,5 @@ function Event({ event }) {
 Event.propTypes = {
   event: PropTypes.object.isRequired
 };
+
 export default Event;
