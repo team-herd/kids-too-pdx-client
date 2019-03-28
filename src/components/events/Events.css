@@ -12,6 +12,9 @@
       background-color: white;
       margin-bottom: 0.8em;
     }
+    section {
+      margin: 0;
+    }
   }
 }
 @media only screen and (min-width: 1000px) {
