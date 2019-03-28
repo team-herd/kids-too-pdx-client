@@ -28,24 +28,6 @@ describe('Submit Event reducers', () => {
     });
   });
 
-  it('updates contact', () => {
-    const action = {
-      type: 'UPDATE_CONTACT',
-      payload: {
-        name: 'Joe',
-        email: 'joe@email.com'
-      }
-    };
-
-    expect(reducer(state, action)).toEqual({
-      ...state,
-      contact: {
-        name: 'Joe',
-        email: 'joe@email.com'
-      }
-    });
-  });
-
   it('updates event name', () => {
     const action = {
       type: 'UPDATE_EVENT_NAME',
@@ -79,24 +61,6 @@ describe('Submit Event reducers', () => {
     expect(reducer(state, action)).toEqual({
       ...state,
       time: '2pm'
-    });
-  });
-
-  it('updates location', () => {
-    const action = {
-      type: 'UPDATE_LOCATION',
-      payload: {
-        street: '123 Main St.',
-        zip: 97223
-      }
-    };
-
-    expect(reducer(state, action)).toEqual({
-      ...state,
-      location: {
-        street: '123 Main St.',
-        zip: 97223
-      }
     });
   });
 

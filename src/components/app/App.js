@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import 'normalize.css';
@@ -10,7 +10,7 @@ import AboutUs from '../info/AboutUs';
 import Callback from '../../containers/auth/Callback';
 import Resources from '../resources/Resources';
 // import withSession from '../../containers/auth/withSession';
-import SubmitEvent from '../../components/submission/SubmitEvent';
+// import SubmitEvent from '../../components/submission/SubmitEvent';
 // import SubmitEventContainer from '../../containers/SubmitEventContainer';
 
 export default function App() {

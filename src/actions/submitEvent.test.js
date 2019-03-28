@@ -4,16 +4,12 @@ import {
   CREATE_EVENT_PENDING,
   CREATE_EVENT_FULFILLED,
   CREATE_EVENT_REJECTED,
-  updateContact,
-  UPDATE_CONTACT,
   updateEventName,
   UPDATE_EVENT_NAME,
   updateDate,
   UPDATE_DATE,
   updateTime,
   UPDATE_TIME,
-  updateLocation,
-  UPDATE_LOCATION,
   updatePrice,
   UPDATE_PRICE,
   updateRr,
@@ -47,21 +43,6 @@ describe('submit event actions', () => {
     });
   });
 
-  it('updates contact info', () => {
-    const action = updateContact({
-      name: 'The event',
-      email: 'blah@email.com'
-    });
-
-    expect(action).toEqual({
-      type: UPDATE_CONTACT,
-      payload: {
-        name: 'The event',
-        email: 'blah@email.com'
-      }
-    });
-  });
-
   it('updates event name', () => {
     const action = updateEventName('The New Name');
 
@@ -86,21 +67,6 @@ describe('submit event actions', () => {
     expect(action).toEqual({
       type: UPDATE_TIME,
       payload: '2pm'
-    });
-  });
-
-  it('updates location', () => {
-    const action = updateLocation({
-      street: '123 Main st.',
-      zip: '97223'
-    });
-
-    expect(action).toEqual({
-      type: UPDATE_LOCATION,
-      payload: {
-        street: '123 Main st.',
-        zip: '97223'
-      }
     });
   });
 
