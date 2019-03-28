@@ -5,3 +5,6 @@
 image {
   height: 200%;
 }
+p {
+  padding: 1em;
+}
