@@ -6,7 +6,6 @@ function SubmitEvent({
   contact, name, date, time, location, price, minAge, maxAge, category, description,
   rrSelect, handleSubmit, handleChange, reducedRate
 }) {
-  console.log('contact', contact);
   const { contactName, email, phone } = contact;
   const { venue, address, city, state, zipcode } = location;
   return (
