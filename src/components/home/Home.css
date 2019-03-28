@@ -4,11 +4,12 @@
 .Home {
   position: relative;
   z-index: 1;
-}
-.Home:before {
-  position: absolute;
-  z-index: -1;
-  background-image: url('https://previews.123rf.com/images/suchota/suchota1503/suchota150300413/37233779-abstract-wallpaper-oil-painting-background-with-with-palette-knife-marks.jpg');
+  background: url('https://static1.squarespace.com/static/59f94cf7e5dd5b2bddbad91b/t/5a4bb9808165f57ec7dbce1e/1521398304053/Screen+Shot+2018-01-01+at+12.45.14+PM.png');
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin: auto;
+}
+img {
+  width: 100%;
 }
