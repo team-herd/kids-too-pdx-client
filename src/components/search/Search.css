@@ -4,12 +4,12 @@
   text-align: center;
   padding: .7em;
   position: fixed;
-  top: 7.8em;
+  top: 8em;
   background-color: white;
   width: 100vw;
   height: 5em;
   select {
-    margin: 0; 
+    margin: 50em;; 
     padding: .5em;
     font-size: .5em;
   }
@@ -34,10 +34,12 @@
   
 @media only screen and (min-width: 1000px) {
   .Select {
+    
+    top: 9.5em;
     height: 5vh;
     width: 100vw;
-    display: flex;
-    justify-content: space-around;
+    margin: auto;
+    padding: 1em;
     label {
       display: flex;
       justify-content: center;
@@ -49,8 +51,16 @@
       margin-bottom: auto; 
       padding: .5em;
       font-size: .5em;
+      margin-right: 0;
+      margin-left: 0;
     }
-    
+    form {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      display: flex;
+      justify-content: center
+    }
   }
 } 
  
