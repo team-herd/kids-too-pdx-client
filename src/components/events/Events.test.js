@@ -50,7 +50,8 @@ describe('Events', () => {
           ageMin: 9,
           ageMax: 12,
           category: 'Art',
-          description: 'The bestest event'
+          description: 'The bestest event',
+          details: true
         }
       ],
 

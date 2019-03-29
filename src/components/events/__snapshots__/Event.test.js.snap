@@ -20,11 +20,11 @@ exports[`Event matches snapshot for Event 1`] = `
     <span>
       Date:
     </span>
-    3/28/2019
+    Thu Mar 28 2019 18:18:59 GMT-0700 (Pacific Daylight Time)
   </p>
   <p>
     <span>
-      Time: @
+      Time:
     </span>
      
     2pm
@@ -45,15 +45,11 @@ exports[`Event matches snapshot for Event 1`] = `
     <span>
       Age:
     </span>
-    9
-    -
-    12
+     
+    9-12
   </p>
   <p>
     Art
-  </p>
-  <p>
-    The bestest event
   </p>
 </section>
 `;
