@@ -19,6 +19,10 @@ function Event({ event, details }) {
   else if(event.ageMax) {
     event.age = `${event.ageMax}`;
   } 
+  if(event.price === 0) {
+    event.price = 'Free';
+  }
+
   const date = new Date(event.date);
   event.dateDisplay = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
 
@@ -32,7 +36,7 @@ function Event({ event, details }) {
         <p><span>Date:</span>{event.dateDisplay}</p>
         {event.time && <p><span>Time:</span> {event.time}</p>}
         {event.location && event.location.venue && <p><span>Location:</span>{event.location.venue}</p>}
-        {event.price && <p><span>Cost:</span>{event.price}</p>}
+        {event.price && <p><span>Cost:</span>${event.price}</p>}
         {event.age && <p><span>Age:</span> {event.age}</p>}
         {event.category && <p>{event.category}</p>}
         {details && event.description && <p>{event.description}</p>}

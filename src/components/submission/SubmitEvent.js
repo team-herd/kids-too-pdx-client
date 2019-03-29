@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './SubmitEvent.css';
 
 function SubmitEvent({
-  contact, name, date, time, location, price, minAge, maxAge, category, description,
+  contact, name, website, date, time, location, price, minAge, maxAge, category, description,
   rrSelect, handleSubmit, handleChange, reducedRate
 }) {
   const { contactName, email, phone } = contact;
@@ -11,7 +11,7 @@ function SubmitEvent({
   return (
     <>
       <form className={styles.Form} onSubmit={handleSubmit.bind(
-        null, contact, name, date, time, location, price, minAge, maxAge, reducedRate, category, description
+        null, contact, name, website, date, time, location, price, minAge, maxAge, reducedRate, category, description
       )}>
         <fieldset>
           <legend>Contact Info</legend>
@@ -33,6 +33,11 @@ function SubmitEvent({
 
           <label>Name:
             <input type="text" value={name} name="name" onChange={handleChange} />
+          </label>
+
+          <label>
+            Website: 
+            <input type="text" value={website} name="website" onChange={handleChange}></input>
           </label>
 
           <label>Date:
@@ -90,6 +95,7 @@ function SubmitEvent({
 SubmitEvent.propTypes = {
   contact: PropTypes.object,
   name: PropTypes.string,
+  website: PropTypes.string,
   date: PropTypes.string,
   time: PropTypes.string,
   location: PropTypes.object,
