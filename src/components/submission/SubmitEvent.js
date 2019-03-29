@@ -72,12 +72,12 @@ function SubmitEvent({
           <label>Category:
             <select value={category} onChange={handleChange} name="category" required>
               <option value="DEFAULT" hidden>Category</option>
-              <option value="sports">Sports</option>
-              <option value="arts">Art</option>
-              <option value="music">Music</option>
-              <option value="performance">Performance</option>
-              <option value="educational">Educational</option>
-              <option value="volunteer">Volunteer</option>
+              <option value="Sports">Sports</option>
+              <option value="Art">Art</option>
+              <option value="Music">Music</option>
+              <option value="Performance">Performance</option>
+              <option value="Educational">Educational</option>
+              <option value="Volunteer">Volunteer</option>
             </select>
           </label>
 
