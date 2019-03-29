@@ -31,7 +31,7 @@
   
 @media only screen and (min-width: 1000px) {
   .Select {
-    top: 9.5em;
+    top: 7.9em;
     height: 5vh;
     width: 100vw;
     margin: auto;
@@ -52,7 +52,7 @@
     }
     form {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       margin: 0;
     }
   }
