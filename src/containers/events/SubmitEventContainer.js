@@ -94,6 +94,10 @@ const mapDispatchToProps = (dispatch, props) => ({
     dispatch(clearForm());
   },
 
+  clear() {
+    dispatch(clearForm());
+  },
+
   rrSelect({ target }) {
     dispatch(updateRr(target.checked));
   }
