@@ -6,18 +6,28 @@ import { Link } from 'react-router-dom';
 function Event({ event, details }) {
   if(event.ageMin && event.ageMax) {
     event.age = `${event.ageMin}-${event.ageMax}`;
-  } else if(event.ageMin) {
+  } 
+  else if(event.ageMin === 0 && !event.ageMax) {
+    event.age = 'All ages';
+  } 
+  else if(event.ageMax > 50 && !event.ageMinx) {
+    event.age = 'All ages';
+  }  
+  else if(event.ageMin) {
     event.age = `${event.ageMin}`;
-  } else if(event.ageMax) {
+  } 
+  else if(event.ageMax) {
     event.age = `${event.ageMax}`;
-  }
+  } 
   const date = new Date(event.date);
   event.dateDisplay = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
-  
+
   return (
     <>
       <section className={styles.Event}>
-        <img src={event.image} alt='event picture' />
+        <figure>
+          <img src={event.image} alt='event picture' />
+        </figure>
         <Link to={`/events/${event._id}`}><h2>{event.name}</h2></Link>
         <p><span>Date:</span>{event.dateDisplay}</p>
         {event.time && <p><span>Time:</span> {event.time}</p>}
@@ -30,6 +40,7 @@ function Event({ event, details }) {
     </>
   );
 }
+
 Event.propTypes = {
   event: PropTypes.object.isRequired,
   details: PropTypes.boolean
