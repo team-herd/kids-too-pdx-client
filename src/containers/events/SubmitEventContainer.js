@@ -80,7 +80,6 @@ const mapDispatchToProps = dispatch => ({
   },
 
   rrSelect({ target }) {
-    console.log('hi');
     dispatch(updateRr(target.checked));
   }
 });

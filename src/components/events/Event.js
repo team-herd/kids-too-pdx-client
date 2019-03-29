@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Event.css';
-// import EventDetail from '../events/EventDetail';
 import { Link } from 'react-router-dom';
-// import EventDescription from './EventDescription';
-// import dollar from '../../../public/assets/dollar-symbol.png';
+
 function Event({ event, details }) {
   if(event.ageMin && event.ageMax) {
     event.age = `${event.ageMin}-${event.ageMax}`;
@@ -27,6 +25,7 @@ function Event({ event, details }) {
         {event.price && <p><span>Cost:</span>{event.price}</p>}
         {event.age && <p><span>Age:</span> {event.age}</p>}
         {event.category && <p>{event.category}</p>}
+        {details && event.description && <p>{event.description}</p>}
       </section>
     </>
   );
