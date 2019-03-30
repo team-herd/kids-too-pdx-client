@@ -1,13 +1,10 @@
 import { post, get } from './request';
+import { stringify } from 'querystring';
 
 export const postEvent = event => post('/events', event);
 export const getEvents = () => get('/events');
 export const getEvent = id => get(`/events/${id}`);
-export const getFilteredEvents = filters => {
-  let route = '/events/query/q?';
 
-  Object.keys(filters).every(key => route += `${key}=${filters[key]}&`);
-  
-  return get(route);
-};
-
+// can use querystring here to stringify your object
+// also, instead of every you should have used forEach
+export const getFilteredEvents = filters => get(`/events/query?${stringify(filters)}`)
