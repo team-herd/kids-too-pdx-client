@@ -1,3 +1,5 @@
+// this file is capitalized, while your other
+// reducers are lower case. Keep it consistent
 import {
   CREATE_EVENT,
   UPDATE_CONTACT_NAME,
@@ -45,12 +47,12 @@ const initialState = {
 };
 
 export default function reducer(state = initialState, { payload, type }) {
-  switch(type) {
+  switch (type) {
     case CREATE_EVENT:
       return {
         ...state
       };
-    case UPDATE_EVENT_NAME: 
+    case UPDATE_EVENT_NAME:
       return {
         ...state,
         name: payload
@@ -70,7 +72,7 @@ export default function reducer(state = initialState, { payload, type }) {
         ...state,
         contact: { ...state.contact, email: payload }
       };
-    case UPDATE_WEBSITE: 
+    case UPDATE_WEBSITE:
       return {
         ...state,
         website: payload
